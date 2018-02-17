@@ -10,13 +10,13 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 export function fetchWeather(city) {
     //URL that we will make a get request with for weather data - uses the below format of link + API KEY + city + country code, see documentaton on website for more details
     const url =`${ROOT_URL}&q=${city},us`;
-    //Performs a get request - uses Axios to make a get request (for weather data) to our url (the OpenWeatherMap back end API) this will return a promise (similar to JQuery Ajax requests)
+    //Performs a get request - uses Axios to make an Ajax request (for weather data) to our url (the OpenWeatherMap back end API) this will return a promise (similar to JQuery Ajax requests)
     const request = axios.get(url);
     
     //Action
     return {
         type: FETCH_WEATHER,
-        //Payload = the returned promise from the get request
+        //Returns the payload - returns the promise from the Axios get request
         payload: request
     };
 }
