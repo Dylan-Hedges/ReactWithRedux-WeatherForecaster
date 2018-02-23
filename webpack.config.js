@@ -21,7 +21,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './',
-    public: process.env.C9_HOSTNAME
+    contentBase: './'
   }
 };
