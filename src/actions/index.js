@@ -1,9 +1,6 @@
-// import {API_KEY} from '../../config.js';
 import axios from 'axios';
 
-// const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
-const productionAPIKey = process.env.PRODUCTION_API_KEY;
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${productionAPIKey}`;
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=INSERT_API_KEY`;
 
 //Action type - we store the action type in a single variable because this means we can import it into the action creator below AND the reducer (helps prevent typos and can easily be updated)
 export const FETCH_WEATHER = 'FETCH_WEATHER';
